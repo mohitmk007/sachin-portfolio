@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full   ${
+      className={`fixed top-0 w-full${
         showNavbar ? "translate-y-0" : "-translate-y-full "
       }transition-transform duration-300 ease-in-out fixed top-0 left-0 w-full text-black p-4 bg-gray-100 z-10`}
     >
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <img
                   src={logo1}
                   alt="Camera logo"
-                  className="h-[78px] rounded-full cursor-pointer"
+                  className="h-[78px] rounded-full cursor-pointer border-2 border-orange-500"
                 />
               </Link>
             </span>
@@ -56,7 +56,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   offset={-100}
-                  className=" text-black hover:text-gray-700 text-xl cursor-pointer"
+                  className=" text-black hover:text-gray-700 hover:border-b-[2px] hover:border-b-orange-500 text-xl cursor-pointer"
                 >
                   Home
                 </Link>
@@ -67,7 +67,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   offset={-100}
-                  className=" text-black hover:text-gray-700 text-xl cursor-pointer"
+                  className=" text-black hover:text-gray-700 text-xl cursor-pointer hover:border-b-[2px] hover:border-b-orange-500"
                 >
                   About
                 </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   offset={-300}
-                  className=" text-black hover:text-gray-700 text-xl cursor-pointer"
+                  className=" text-black hover:text-gray-700 text-xl cursor-pointer hover:border-b-[2px] hover:border-b-orange-500"
                 >
                   Portfolio
                 </Link>
@@ -89,7 +89,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   offset={-300}
-                  className=" text-black hover:text-gray-700 text-xl cursor-pointer"
+                  className=" text-black hover:text-gray-700 text-xl cursor-pointer hover:border-b-[2px] hover:border-b-orange-500"
                 >
                   Services
                 </Link>
@@ -100,7 +100,7 @@ const Navbar = () => {
                   smooth={true}
                   duration={500}
                   offset={-200}
-                  className=" text-black hover:text-gray-700 text-xl cursor-pointer"
+                  className=" text-black hover:text-gray-700 text-xl cursor-pointer hover:border-b-[2px] hover:border-b-orange-500"
                 >
                   Contact
                 </Link>
@@ -111,7 +111,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setOpenNav(!openNav)}
-              className=" text-black hover:text-gray-700"
+              className=" text-black hover:text-gray-700 hover:border-b-[2px] hover:border-b-orange-500"
             >
               {openNav ? <FaTimes /> : <FaBars />}
             </button>
@@ -120,47 +120,62 @@ const Navbar = () => {
       </div>
       {/* Mobile navigation */}
       {openNav && (
-        <div className="md:hidden bg-gray-700">
-          <ul className="flex flex-col space-y-2 p-4">
+        <div className="md:hidden bg-gray-500">
+          <ul className="flex flex-col space-y-4 p-6">
             <li className="">
-              <a
-                href="#"
-                className=" text-black hover:text-gray-700 hover:  p-3 rounded-md"
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                offset={-100}
+                className=" text-white hover:text-gray-300 hover:p-3 rounded-md cursor-pointer"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className=" text-black hover:text-gray-700 hover:  p-3 rounded-md"
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                offset={-330}
+                className=" text-white hover:text-gray-300 hover:p-3 rounded-md cursor-pointer"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className=" text-black hover:text-gray-700 hover:  p-3 rounded-md"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className=" text-black hover:text-gray-700 hover:  p-3 rounded-md"
+              <Link
+                to="portfolio"
+                smooth={true}
+                duration={500}
+                offset={-330}
+                className=" text-white hover:text-gray-300 hover:p-3 rounded-md cursor-pointer"
               >
                 Portfolio
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
-                className=" text-black hover:text-gray-700 hover:  p-3 rounded-md"
-              >
-                Contact
-              </a>
+            <Link
+                  to="service"
+                  smooth={true}
+                  duration={500}
+                  offset={-300}
+                  className=" text-white hover:text-gray-300 hover:p-3 rounded-md cursor-pointer"
+                >
+                  Services
+                </Link>
+            </li>
+            <li>
+            <Link
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  offset={-300}
+                  className=" text-white hover:text-gray-300 hover:p-3 rounded-md cursor-pointer"
+                >
+                  Contact
+                </Link>
             </li>
             {/* Add more mobile menu items as needed */}
           </ul>

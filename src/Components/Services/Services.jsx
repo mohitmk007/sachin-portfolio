@@ -6,12 +6,12 @@ import photo from "../../assets/photo.jpg";
 
 const Services = () => {
   return (
-    <div className="service flex items-center justify-center mb-10">
+    <div className="service flex items-center justify-center mb-10  p-16 max-sm:p-8">
       <div className="">
-        <div className="flex ic justify- gap-8 mb-4">
+        <div className="flex items-center max-md:flex-col justify-center gap-8 mb-4">
           <div className="relative">
             <img
-              className="object-cover border-2  h-[500px] w-[500px] rounded-lg bg-cover"
+              className="object-cover border-2 h-[500px] w-[500px] rounded-lg bg-cover"
               src={wedding}
               alt=""
             />
@@ -34,7 +34,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="flex ic justify- gap-8">
+        <div className="flex items-center justify-center gap-8 max-md:flex-col">
           <div className="relative">
             <img
               className="object-cover h-[500px] w-[500px] rounded-lg"

@@ -3,13 +3,12 @@
 const Testimonial = () => {
   return (
     <div>
-      <div className="testimonial container my-24 mx-auto md:px-20 relative ">
+      <div className="testimonial container my-24 mx-auto md:px-20 relative max-sm:px-16">
         <section className="mb-32 text-center relative">
           <div className="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
             <div className="mb-12 md:mb-0">
               <div className="mb-6 flex justify-center">
                 <img 
-                
                   src="https://images.unsplash.com/photo-1588608368947-c243aea32bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGluZGlhbnxlbnwwfHwwfHx8MA%3D%3D"
                   className="object-cover w-32 h-32 rounded-full shadow-lg dark:shadow-black/20"
                 />
