@@ -12,7 +12,9 @@ const Contact = () => {
       "template_wwscmvu",
       e.target,
       "v4VQMD_G0yeWp64Ka"
+    // eslint-disable-next-line no-unused-vars
     ).then(res=>{
+      
     }).catch(err=>console.log(err))
   }
   return (
