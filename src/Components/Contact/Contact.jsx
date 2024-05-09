@@ -36,7 +36,7 @@ const Contact = () => {
             </div>
             <div>
               <h1 className="text-3xl max-sm:text-2xl font-bold">Email</h1>
-              <p className="text-xl max-sm:text-lg">sachin983@gmail.com</p>
+              <p className="text-xl max-sm:text-lg">sachinmalendi@gmail.com</p>
             </div>
           </div>
           <div className="flex items-center gap-5">
