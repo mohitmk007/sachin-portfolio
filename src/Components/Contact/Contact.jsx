@@ -1,9 +1,20 @@
 // import React from 'react'
+import emailjs from "emailjs-com";
 import { HiLocationMarker } from "react-icons/hi";
 import { MdOutlineEmail } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
 
 const Contact = () => {
+  function sendmail(e) {
+    e.preventDefault();
+    emailjs.sendForm(
+      "service_bbjdm5l",
+      "template_wwscmvu",
+      e.target,
+      "v4VQMD_G0yeWp64Ka"
+    ).then(res=>{
+    }).catch(err=>console.log(err))
+  }
   return (
     <>
       <div className="contact flex items-center max-lg:flex-col justify-between px-16 max-sm:px-8 mb-9 gap-5 ">
@@ -37,35 +48,44 @@ const Contact = () => {
           </div>
         </div>
         <div className="w-1/2 max-lg:w-full  ">
-          <div className="grid grid-cols-2 max-md:grid-cols-1 gap-3 mb-5">
+          <form onSubmit={sendmail}>
+            <div className="grid grid-cols-2 max-md:grid-cols-1 gap-3 mb-5">
+              <input
+                className="w-full h-16 px-7 max-[500px]:h-14 max-[500px]:px-5 rounded-xl text-lg border-2"
+                type="text"
+                name="name"
+                placeholder="Yout Name"
+              />
+              <input
+                className="w-full h-16 px-7 rounded-xl text-lg border-2 max-[500px]:h-14 max-[500px]:px-5"
+                type="email"
+                name="user_email"
+                placeholder="Your Email"
+              />
+              <input
+                className="w-full h-16 px-7 rounded-xl text-lg border-2 max-[500px]:h-14 max-[500px]:px-5"
+                type="text"
+                name="number"
+                placeholder="Your Phone"
+              />
+              <input
+                className="w-full h-16 px-7 rounded-xl text-lg border-2 max-[500px]:h-14 max-[500px]:px-5"
+                type="text"
+                name="subject"
+                placeholder="Subject"
+              />
+            </div>
+            <textarea
+              id="message"
+              name="message"
+              className="w-full h-52 p-5 border-2 text-lg rounded-xl max-[500px]:h-40 max-[500px]:p-1 max-[500px]:text-base"
+            ></textarea>
             <input
-              className="w-full h-16 px-7 max-[500px]:h-14 max-[500px]:px-5 rounded-xl text-lg border-2"
-              type="text"
-              placeholder="Yout Name"
-            />
-            <input
-              className="w-full h-16 px-7 rounded-xl text-lg border-2 max-[500px]:h-14 max-[500px]:px-5"
-              type="text"
-              placeholder="Your Email"
-            />
-            <input
-              className="w-full h-16 px-7 rounded-xl text-lg border-2 max-[500px]:h-14 max-[500px]:px-5"
-              type="text"
-              placeholder="Your Phone"
-            />
-            <input
-              className="w-full h-16 px-7 rounded-xl text-lg border-2 max-[500px]:h-14 max-[500px]:px-5"
-              type="text"
-              placeholder="Subject"
-            />
-          </div>
-          <textarea
-            id="message"
-            className="w-full h-52 p-5 border-2 text-lg rounded-xl max-[500px]:h-40 max-[500px]:p-1 max-[500px]:text-base"
-          ></textarea>
-          <button className="w-full hover:bg-orange-500 px-8 py-3 rounded-full transition duration-500 hover:text-white border-2 border-orange-500 mt-5">
-            Submit
-          </button>
+              type="submit"
+              value="send"
+              className="w-full hover:bg-orange-500 px-8 py-3 rounded-full transition duration-500 hover:text-white border-2 border-orange-500 mt-5"
+            ></input>
+          </form>
         </div>
       </div>
       <div className="">
