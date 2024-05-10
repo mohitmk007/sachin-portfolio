@@ -9,6 +9,7 @@ import Services from "./Components/Services/Services";
 import Testimonial from "./Components/Testimonial/Testimonial";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import { FaWhatsapp } from "react-icons/fa";
 
 const App = () => {
   return (
@@ -24,19 +25,19 @@ const App = () => {
       <Title2
         subtitle="Portfolio"
         title="My Amazing Works"
-        desc="Most common methods for designing websites that work well on desktop is responsive and adaptive design"
+        desc="Sometimes reality blurs, and I embrace it. Abstracts emerge—a swirl of colors, a play of light, a texture that begs to be touched."
       ></Title2>
       <Portfolio></Portfolio>
       <Title2
         subtitle="Services"
         title="What I Do for Clients"
-        desc="Most common methods for designing websites that work well on desktop is responsive and adaptive design"
+        desc="From weddings to corporate headshots, from newborn portraits to travel adventures—I’m here to capture life’s exquisite moments. Let’s embark on this creative journey together!"
       ></Title2>
       <Services></Services>
       <Title2
         subtitle="Testimonials"
         title="What My Clients Say"
-        desc="Most common methods for designing websites that work well on desktop is responsive and adaptive design"
+        desc="Thank you for choosing us to be part of your memories. We look forward to hearing from you! please leave your comments also."
       ></Title2>
       <Testimonial></Testimonial>
       <Title2
@@ -46,6 +47,16 @@ const App = () => {
       ></Title2>
       <Contact></Contact>
       <Footer></Footer>
+      <li className="list-none text-3xl text-green-600 sticky bottom-32 h-0">
+        <a
+          href="https://wa.me/9837716511"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="float-end text-5xl bg-orange-300 p-3 max-sm:text-4xl max-sm:p-2 rounded-full mr-10"
+        >
+          <FaWhatsapp />
+        </a>
+      </li>
     </div>
   );
 };

@@ -7,16 +7,20 @@ import { Link } from "react-scroll";
 const Home = () => {
   return (
     <div
-      className="home flex max-sm:flex-col justify-between items-center h-screen px-32 max-lg:px-20 gap-5 max-md:px-14   "
+      className="home flex max-sm:flex-col justify-between items-center h-screen px-32 max-lg:px-20 gap-5 max-md:px-14 max-[450px]:px-7 "
       style={{
         backgroundImage: `url(${background})`,
         backgroundSize: "cover", // Adjust as needed
         backgroundPosition: "center", // Adjust as needed
       }}
     >
-      <div className="left-Section w-1/2 max-sm:w-full max-sm:pt-64">
-        <h2 className="text-4xl max-md:text-3xl text-orange-600 mb-5">Hello, I'm</h2>
-        <h1 className="text-7xl max-lg:text-6xl font-semibold mb-3">Sachin Kumar</h1>
+      <div className="left-Section w-1/2 max-sm:w-full max-sm:pt-36 max-sm:p-1 ">
+        <h2 className="text-4xl max-md:text-3xl text-orange-600 mb-5">
+          Hello, I'm
+        </h2>
+        <h1 className="text-7xl max-lg:text-6xl font-semibold mb-3">
+          Sachin Kumar
+        </h1>
         <h3 className="text-2xl max-md:text-xl my-6">
           A <span className="text-orange-600"> Photo and Videographer</span>{" "}
           From <span className="text-green-600"> Shamli </span>
@@ -25,18 +29,12 @@ const Home = () => {
           I'm make Photo & Videos based in client work, and I'm very passionate
           and dedicated to my work.
         </p>
-        <div className="flex justify-start items-center gap-5 mt-7">
-        <Link
-                  to="about"
-                  smooth={true}
-                  duration={500}
-                  offset={-100}
-                >
-
-          <button className="hover:bg-orange-500 px-8 py-3 max-md:px-6 max-md:py-2 rounded-full transition duration-400 hover:text-white border-2 border-orange-500">
-            About Me
-          </button>
-                </Link>
+        <div className="flex justify-start items-center gap-5 mt-7 max-[340px]:gap-4">
+          <Link to="about" smooth={true} duration={500} offset={-100}>
+            <button className="hover:bg-orange-500 px-8 py-3 max-md:px-6 max-md:py-2 max-[330px]:px-5 rounded-full transition duration-400 hover:text-white border-2 border-orange-500">
+              About Me
+            </button>
+          </Link>
           <li className="list-none text-3xl hover:text-blue-600">
             <a href="https://www.facebook.com/sachinmalendi" target="_blank">
               <FaFacebook />
@@ -51,7 +49,7 @@ const Home = () => {
             </a>
           </li>
           <li className="list-none text-3xl hover:text-green-600">
-            <a href="">
+            <a href="https://wa.me/9837716511" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp />
             </a>
           </li>
